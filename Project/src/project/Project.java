@@ -23,6 +23,7 @@ public class Project {
         System.out.println("I am mac");
         System.out.println(".0.0.");
         System.out.println("baby go");
+        System.out.println("sawadde krub");
     }
     
 }
