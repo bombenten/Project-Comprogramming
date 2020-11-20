@@ -24,6 +24,7 @@ public class Project {
         System.out.println(".0.0.");
         System.out.println("baby go");
         System.out.println("sawadde krub");
+        System.out.println("KK boi is good guy");
     }
     
 }
