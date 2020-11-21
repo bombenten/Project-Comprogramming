@@ -1,5 +1,5 @@
 
-package RentCar;
+
 
 public class WhenRent {
 
