@@ -5,14 +5,15 @@ import java.util.Scanner;
 public class Project {
 
     public static void main(String[] args) {
-        int people, n, dayLent;
-        int checkA, checkB, checkC, checkD, carA, carB, carC, carD, max;
-        int ra, rb, rc, rd;
+        int people, n, dayLent, max;
+        int checkA, checkB, checkC; //check status car if 0 = not have car
+        int checkD, carA, carB, carC, carD; 
+        int returnA, returnB, returnC, returnD; //
 
-        ra = 1;
-        rb = 1;
-        rc = 1;
-        rd = 1;
+        returnA = 1;
+        returnB = 1;
+        returnC = 1;
+        returnD = 1;
         carA = 10;
         carB = 20;
         carC = 20;
@@ -27,61 +28,61 @@ public class Project {
             max = carA * checkA + carB * checkB + carB * checkC + carD * checkD;
             System.out.println("There are " + max + " seats.");
             System.out.print("Enter people for lent : ");
-            people = STDIN_SCANNER.nextInt();
+            people = myValue.nextInt();
             System.out.print("Enter day for lent : ");
-            dayLent = STDIN_SCANNER.nextInt();
+            dayLent = myValue.nextInt();
             System.out.println("Date of return : " + (dayLent + day));
             System.out.print("Car : ");
 
             if (people > max || people <= 0) {
                 System.out.print("0");
             } else {
-                if (rd <= day && people > 20 && people != 20 && dayLent > 0) {
+                if (returnD <= day && people > 20 && people != 20 && dayLent > 0) {
                     checkD = checkD - 1;
-                    rd = day + dayLent;
+                    returnD = day + dayLent;
                     System.out.print("4 ");
                     people = people - 30;
                 }
                 if (checkB == 1 && people > 10 && dayLent > 0) {
                     checkB = checkB - 1;
-                    rb = day + dayLent;
+                    returnB = day + dayLent;
                     System.out.print("2 ");
                     people = people - 20;
                 }
                 if (checkC == 1 && people > 10 && dayLent > 0) {
                     checkC = checkC - 1;
-                    rc = day + dayLent;
+                    returnC = day + dayLent;
                     System.out.print("3 ");
                     people = people - 20;
                 }
                 if (checkD == 1 && people == 20 && dayLent > 0) {
                     checkD = checkD - 1;
-                    rd = day + dayLent;
+                    returnD = day + dayLent;
                     System.out.print("4 ");
                     people = people - 30;
                 }
                 if (checkA == 1 && people <= 10 && people != 0 && dayLent > 0) {
                     checkA = checkA - 1;
-                    ra = day + dayLent;
+                    returnA = day + dayLent;
                     System.out.print("1 ");
                 }
 
             }
-            if (rd <= day + 1 && checkD == 0) {
+            if (returnD <= day + 1 && checkD == 0) {
                 checkD++;
             }
-            if (rb <= day + 1 && checkB == 0) {
+            if (returnB <= day + 1 && checkB == 0) {
                 checkB++;
             }
-            if (rc <= day + 1 && checkC == 0) {
+            if (returnC <= day + 1 && checkC == 0) {
                 checkC++;
             }
-            if (ra <= day + 1 && checkA == 0) {
+            if (returnA <= day + 1 && checkA == 0) {
                 checkA++;
             }
             System.out.println("\n");
         }
 
     }
-    public final static Scanner STDIN_SCANNER = new Scanner(System.in);
+    public final static Scanner myValue = new Scanner(System.in);
 }
