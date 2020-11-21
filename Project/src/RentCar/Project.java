@@ -1,5 +1,5 @@
 
-package project;
+package RentCar;
 
 public class Project {
 
