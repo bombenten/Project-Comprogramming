@@ -17,6 +17,7 @@ public class rental {
     private int n, dayLent, max;
     private int people;
     private int day = 0;
+    int max = carA * checkA + carB * checkB + carB * checkC + carD * checkD;
 
     public rental(int people,int day) {
         this.people = people;
