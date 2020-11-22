@@ -24,37 +24,37 @@ public class rental {
         this.day = day;
     }
 
-    public String checkAndSelectCar() {
+    public void checkAndSelectCar() {
         if (people > max || people <= 0) {
         } else {
             if (returnD <= day && people > 20 && people != 20 && dayLent > 0) {
                 checkD = checkD - 1;
                 returnD = day + dayLent;
                 people = people - 30;
-                return "4";
+                System.out.print("4 ");
             }
             if (checkB == 1 && people > 10 && dayLent > 0) {
                 checkB = checkB - 1;
                 returnB = day + dayLent;
                 people = people - 20;
-                return "2";
+                System.out.print("2 ");
             }
             if (checkC == 1 && people > 10 && dayLent > 0) {
                 checkC = checkC - 1;
                 returnC = day + dayLent;
                 people = people - 20;
-                return "3";
+                System.out.print("3 ");
             }
             if (checkD == 1 && people == 20 && dayLent > 0) {
                 checkD = checkD - 1;
                 returnD = day + dayLent;
                 people = people - 30;
-                return "4";
+                System.out.print("4 ");
             }
             if (checkA == 1 && people <= 10 && people != 0 && dayLent > 0) {
                 checkA = checkA - 1;
                 returnA = day + dayLent;
-                return "1";
+                System.out.print("1 ");
             }
 
         }
@@ -70,7 +70,7 @@ public class rental {
         if (returnA <= day + 1 && checkA == 0) {
             checkA++;
         }
-        return "0";
+        System.out.println("/n");
     }
 
     public int getPeople(int people) {
