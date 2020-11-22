@@ -7,7 +7,7 @@ public class Project {
     public static void main(String[] args) {
         int people, n, dayLent, max;
         int checkA, checkB, checkC; //check status car if 0 = not have car
-        int checkD, carA, carB, carC, carD; 
+        int checkD, carA, carB, carC, carD;
         int returnA, returnB, returnC, returnD; //
 
         returnA = 1;
