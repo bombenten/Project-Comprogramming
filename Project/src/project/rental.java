@@ -14,10 +14,11 @@ public class rental {
     private int checkB = 1;
     private int checkC = 1;
     private int checkD = 1;
-    private int n, dayLent, max;
+    private int n, dayLentmax = carA * checkA + carB * checkB + carB * checkC + carD * checkD;;
     private int people;
     private int day = 0;
-    int max = carA * checkA + carB * checkB + carB * checkC + carD * checkD;
+    
+    int 
 
     public rental(int people,int day) {
         this.people = people;
